@@ -53,86 +53,84 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Comment ça marche - Bento Style */}
+        {/* Comment ça marche - Clean lines */}
         <section id="comment-ca-marche" className="py-12 sm:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12">
               Comment ça marche
             </h3>
-            <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-[#D1E8E2]/60 to-white rounded-3xl border-2 border-[#19747E]/10 p-8 text-center hover:border-[#19747E]/30 transition-all duration-200">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 border-2 border-[#19747E]/20">
-                  <span className="text-3xl">📅</span>
+            <div className="divide-y-2 divide-gray-100">
+              <div className="flex items-start gap-6 py-8">
+                <span className="text-4xl">📅</span>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">1. Consultez</h4>
+                  <p className="text-gray-600">
+                    Parcourez toutes les dates importantes organisées par catégorie
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">1. Consultez</h4>
-                <p className="text-gray-600">
-                  Parcourez toutes les dates importantes organisées par catégorie
-                </p>
               </div>
-              <div className="bg-gradient-to-br from-[#A9D6E5]/40 to-white rounded-3xl border-2 border-[#19747E]/10 p-8 text-center hover:border-[#19747E]/30 transition-all duration-200">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 border-2 border-[#19747E]/20">
-                  <span className="text-3xl">🔔</span>
+              <div className="flex items-start gap-6 py-8">
+                <span className="text-4xl">🔔</span>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">2. Inscrivez-vous</h4>
+                  <p className="text-gray-600">
+                    Recevez des notifications avant chaque échéance importante
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">2. Inscrivez-vous</h4>
-                <p className="text-gray-600">
-                  Recevez des notifications avant chaque échéance importante
-                </p>
               </div>
-              <div className="bg-gradient-to-br from-[#D1E8E2]/60 to-white rounded-3xl border-2 border-[#19747E]/10 p-8 text-center hover:border-[#19747E]/30 transition-all duration-200">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 border-2 border-[#19747E]/20">
-                  <span className="text-3xl">✅</span>
+              <div className="flex items-start gap-6 py-8">
+                <span className="text-4xl">✅</span>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-1">3. Restez conforme</h4>
+                  <p className="text-gray-600">
+                    Ne manquez plus jamais une date limite fiscale ou légale
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">3. Restez conforme</h4>
-                <p className="text-gray-600">
-                  Ne manquez plus jamais une date limite fiscale ou légale
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Aperçu des prochaines échéances - Bento Style */}
+        {/* Aperçu des prochaines échéances - Clean lines */}
         <section className="py-12 sm:py-16 bg-[#D1E8E2]/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               Prochaines échéances
             </h3>
             <p className="text-center text-gray-600 mb-8">
               Voici les dates à ne pas manquer
             </p>
-            <div className="max-w-3xl mx-auto space-y-3">
-              {upcomingEvents.map((event) => {
-                const daysUntil = getDaysUntil(event.date);
-                const categoryMeta = getCategoryMeta(event.category);
-                return (
-                  <div 
-                    key={event.id} 
-                    className="flex flex-col sm:flex-row sm:items-center gap-4 bg-white rounded-2xl border-2 border-gray-200 p-5 hover:border-[#19747E]/40 transition-all duration-200 group"
-                  >
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-xl bg-gray-50 border-2 border-gray-100 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                        {categoryMeta?.emoji}
+            <div className="bg-white rounded-2xl overflow-hidden">
+              <div className="divide-y divide-gray-100">
+                {upcomingEvents.map((event) => {
+                  const daysUntil = getDaysUntil(event.date);
+                  const categoryMeta = getCategoryMeta(event.category);
+                  return (
+                    <div 
+                      key={event.id} 
+                      className="flex flex-col sm:flex-row sm:items-center gap-4 px-6 py-5 hover:bg-gray-50 transition-colors"
+                    >
+                      <span className="text-2xl flex-shrink-0">{categoryMeta?.emoji}</span>
+                      <div className="flex-grow min-w-0">
+                        <h4 className="font-semibold text-gray-900 truncate">{event.title}</h4>
+                        <p className="text-sm text-gray-500">{formatDateFr(event.date)}</p>
+                      </div>
+                      <div className="flex items-center gap-3 flex-shrink-0">
+                        <Badge category={event.category} />
+                        <span className={`text-sm font-bold ${
+                          daysUntil <= 7 
+                            ? 'text-red-600' 
+                            : daysUntil <= 30 
+                              ? 'text-amber-600' 
+                              : 'text-gray-500'
+                        }`}>
+                          {daysUntil === 0 ? "Aujourd'hui" : daysUntil === 1 ? 'Demain' : `${daysUntil}j`}
+                        </span>
                       </div>
                     </div>
-                    <div className="flex-grow">
-                      <h4 className="font-bold text-gray-900">{event.title}</h4>
-                      <p className="text-sm text-gray-500">{formatDateFr(event.date)}</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Badge category={event.category} />
-                      <span className={`text-sm font-bold px-3 py-1 rounded-lg ${
-                        daysUntil <= 7 
-                          ? 'bg-red-50 text-red-600 border border-red-200' 
-                          : daysUntil <= 30 
-                            ? 'bg-amber-50 text-amber-600 border border-amber-200' 
-                            : 'bg-gray-50 text-gray-600 border border-gray-200'
-                      }`}>
-                        {daysUntil === 0 ? "Aujourd&apos;hui" : daysUntil === 1 ? 'Demain' : `${daysUntil}j`}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
             <div className="text-center mt-8">
               <Link href="/calendrier">
@@ -142,9 +140,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Categories - Bento Grid */}
+        {/* Categories - Clean lines */}
         <section className="py-12 sm:py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               5 catégories essentielles
             </h3>
@@ -152,62 +150,50 @@ export default function Home() {
               Tout ce dont votre PME a besoin pour rester organisée
             </p>
             
-            {/* Bento Grid Layout */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 max-w-5xl mx-auto">
-              {/* Fiscal - Large card */}
-              <div className="col-span-2 row-span-2 bg-gradient-to-br from-[#19747E]/10 to-[#19747E]/5 rounded-3xl border-2 border-[#19747E]/20 p-8 hover:border-[#19747E]/40 transition-all duration-200 group">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">💰</div>
-                <h4 className="text-xl font-bold text-gray-900 mb-2">Fiscal</h4>
-                <p className="text-gray-600 mb-4">
-                  TPS/TVQ, T4, déclarations annuelles, acomptes provisionnels
-                </p>
+            <div className="divide-y-2 divide-gray-100">
+              <div className="flex items-center gap-6 py-6 group">
+                <span className="text-4xl">💰</span>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-gray-900">Fiscal</h4>
+                  <p className="text-gray-600 text-sm">TPS/TVQ, T4, déclarations annuelles</p>
+                </div>
                 <Badge category="fiscal" />
               </div>
-
-              {/* Subventions */}
-              <div className="col-span-1 bg-gradient-to-br from-[#4A9B8F]/10 to-transparent rounded-3xl border-2 border-[#4A9B8F]/20 p-6 hover:border-[#4A9B8F]/40 transition-all duration-200 group">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🎁</div>
-                <h4 className="font-bold text-gray-900 mb-1">Subventions</h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  CRSNG, SODEC, RS&DE
-                </p>
+              
+              <div className="flex items-center gap-6 py-6 group">
+                <span className="text-4xl">🎁</span>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-gray-900">Subventions</h4>
+                  <p className="text-gray-600 text-sm">CRSNG, SODEC, RS&DE</p>
+                </div>
                 <Badge category="subvention" />
               </div>
-
-              {/* Légal */}
-              <div className="col-span-1 bg-gradient-to-br from-[#C49A6C]/10 to-transparent rounded-3xl border-2 border-[#C49A6C]/20 p-6 hover:border-[#C49A6C]/40 transition-all duration-200 group">
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">⚖️</div>
-                <h4 className="font-bold text-gray-900 mb-1">Légal</h4>
-                <p className="text-gray-600 text-sm mb-3">
-                  Loi 25, équité salariale
-                </p>
+              
+              <div className="flex items-center gap-6 py-6 group">
+                <span className="text-4xl">⚖️</span>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-gray-900">Légal</h4>
+                  <p className="text-gray-600 text-sm">Loi 25, équité salariale</p>
+                </div>
                 <Badge category="legal" />
               </div>
-
-              {/* Emploi - Wide card */}
-              <div className="col-span-2 bg-gradient-to-r from-[#A89BB5]/10 to-[#A89BB5]/5 rounded-3xl border-2 border-[#A89BB5]/20 p-6 hover:border-[#A89BB5]/40 transition-all duration-200 group flex items-center gap-6">
-                <div className="text-5xl group-hover:scale-110 transition-transform">👥</div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-1">Emploi</h4>
-                  <p className="text-gray-600 text-sm mb-2">
-                    Paie, jours fériés, salaire minimum, T4 employés
-                  </p>
-                  <Badge category="emploi" />
+              
+              <div className="flex items-center gap-6 py-6 group">
+                <span className="text-4xl">👥</span>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-gray-900">Emploi</h4>
+                  <p className="text-gray-600 text-sm">Paie, jours fériés, salaire minimum</p>
                 </div>
+                <Badge category="emploi" />
               </div>
-
-              {/* Événements - Full width accent */}
-              <div className="col-span-2 md:col-span-4 bg-gradient-to-r from-[#6B9CAD]/10 via-[#A9D6E5]/10 to-[#6B9CAD]/10 rounded-3xl border-2 border-[#6B9CAD]/20 p-6 hover:border-[#6B9CAD]/40 transition-all duration-200 group">
-                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-center sm:text-left">
-                  <div className="text-5xl group-hover:scale-110 transition-transform">📅</div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-gray-900 mb-1">Événements</h4>
-                    <p className="text-gray-600 text-sm">
-                      Salons, conférences, networking — ne manquez aucune opportunité
-                    </p>
-                  </div>
-                  <Badge category="event" />
+              
+              <div className="flex items-center gap-6 py-6 group">
+                <span className="text-4xl">📅</span>
+                <div className="flex-grow">
+                  <h4 className="font-bold text-gray-900">Événements</h4>
+                  <p className="text-gray-600 text-sm">Salons, conférences, networking</p>
                 </div>
+                <Badge category="event" />
               </div>
             </div>
           </div>
