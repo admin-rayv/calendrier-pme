@@ -1,7 +1,7 @@
 /**
  * Catégories d'événements du calendrier PME
  */
-export type EventCategory = 'fiscal' | 'subvention' | 'legal' | 'event';
+export type EventCategory = 'fiscal' | 'subvention' | 'legal' | 'event' | 'emploi';
 
 /**
  * Fréquence de récurrence

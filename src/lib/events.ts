@@ -37,6 +37,14 @@ export const CATEGORIES: CategoryMeta[] = [
     color: '#8b5cf6',
     description: 'Salons, formations et événements business',
   },
+  {
+    id: 'emploi',
+    label: 'Employment',
+    labelFr: 'Emploi',
+    emoji: '👥',
+    color: '#ec4899',
+    description: 'Obligations envers les employés',
+  },
 ];
 
 /**

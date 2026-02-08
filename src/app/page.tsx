@@ -12,7 +12,7 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-primary-600">
               📅 Calendrier PME
             </h1>
-            <Button variant="primary">S'inscrire aux rappels</Button>
+            <Button variant="primary">S&apos;inscrire aux rappels</Button>
           </div>
         </div>
       </header>
@@ -88,7 +88,7 @@ export default function Home() {
               placeholder="votre@email.com"
               className="flex-1 px-4 py-2 rounded-lg text-gray-900 focus:ring-2 focus:ring-white outline-none"
             />
-            <Button variant="accent">S'inscrire</Button>
+            <Button variant="accent">S&apos;inscrire</Button>
           </div>
         </Card>
       </main>

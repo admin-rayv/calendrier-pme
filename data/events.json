@@ -625,6 +625,32 @@
       "applicableTo": ["incorporated", "sole-proprietor"],
       "priority": "medium",
       "tags": ["arts", "international", "promotion"]
+    },
+    {
+      "id": "emploi-001",
+      "title": "Fin de la période de référence des vacances",
+      "description": "Fin de la période de référence standard pour le calcul des vacances annuelles (1er mai au 30 avril). Les employeurs doivent calculer les jours de vacances accumulés par chaque employé et planifier leur prise de vacances dans les 12 prochains mois.",
+      "date": "2026-04-30",
+      "category": "emploi",
+      "recurrence": "annual",
+      "organization": "CNESST",
+      "sourceUrl": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/vacances-annuelles",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["vacances", "employés", "RH", "planification"]
+    },
+    {
+      "id": "emploi-002",
+      "title": "Rappel: Augmentation du salaire minimum",
+      "description": "Le nouveau salaire minimum entre en vigueur aujourd'hui. Assurez-vous que tous vos employés au salaire minimum reçoivent le nouveau taux dès leur première paie de mai.",
+      "date": "2026-05-01",
+      "category": "emploi",
+      "recurrence": "annual",
+      "organization": "CNESST",
+      "sourceUrl": "https://www.cnesst.gouv.qc.ca/fr/conditions-travail/salaire/salaire-minimum",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "high",
+      "tags": ["salaire minimum", "paie", "employés", "ajustement"]
     }
   ]
 }
