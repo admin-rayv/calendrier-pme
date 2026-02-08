@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "lastUpdated": "2026-02-08",
   "events": [
     {
@@ -547,6 +547,84 @@
       "applicableTo": ["incorporated"],
       "priority": "low",
       "tags": ["montréal", "inclusion", "social"]
+    },
+    {
+      "id": "subvention-013",
+      "title": "Conseil des arts Canada - Rayonner (1re date)",
+      "description": "Date limite pour le programme 'Rayonner au Canada et à l'international'. Financement des déplacements liés au développement de marchés et à la promotion d'artistes.",
+      "date": "2026-01-14",
+      "category": "subvention",
+      "recurrence": "annual",
+      "organization": "Conseil des arts du Canada",
+      "sourceUrl": "https://conseildesarts.ca/financement/subventions/rayonner-au-canada-et-a-l-international",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["arts", "international", "promotion"]
+    },
+    {
+      "id": "subvention-014",
+      "title": "CALQ - Diffusion arts actuels",
+      "description": "Date limite pour déposer un dossier au CALQ pour le plan d'action 2025-2028 pour la diffusion des arts actuels au Québec.",
+      "date": "2026-02-03",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "CALQ",
+      "sourceUrl": "https://www.calq.gouv.qc.ca/",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["arts", "diffusion", "culture"]
+    },
+    {
+      "id": "subvention-015",
+      "title": "Chauffez vert - Fin du programme",
+      "description": "Dernière date pour bénéficier de l'aide financière gouvernementale pour la conversion d'un système de chauffage au mazout ou propane. Programme ferme après cette date.",
+      "date": "2026-03-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "Transition Énergétique Québec",
+      "sourceUrl": "https://transitionenergetique.gouv.qc.ca/residentiel/programmes/chauffez-vert",
+      "applicableTo": ["all"],
+      "priority": "high",
+      "tags": ["énergie", "chauffage", "conversion"]
+    },
+    {
+      "id": "subvention-016",
+      "title": "DÉPART - Autorisation projets",
+      "description": "Date limite pour faire autoriser les projets du programme DÉPART (Développement économique pour l'aide à la redynamisation des territoires) d'Investissement Québec.",
+      "date": "2026-03-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "Investissement Québec",
+      "sourceUrl": "https://www.investquebec.com/quebec/fr/financement/programme-developpement-economique-pour-aide-redynamisation-territoires.html",
+      "applicableTo": ["incorporated"],
+      "priority": "medium",
+      "tags": ["développement", "régions", "redynamisation"]
+    },
+    {
+      "id": "subvention-017",
+      "title": "Conseil des arts Canada - Rayonner (2e date)",
+      "description": "Deuxième date limite pour le programme 'Rayonner au Canada et à l'international'.",
+      "date": "2026-04-22",
+      "category": "subvention",
+      "recurrence": "annual",
+      "organization": "Conseil des arts du Canada",
+      "sourceUrl": "https://conseildesarts.ca/financement/subventions/rayonner-au-canada-et-a-l-international",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["arts", "international", "promotion"]
+    },
+    {
+      "id": "subvention-018",
+      "title": "Conseil des arts Canada - Rayonner (3e date)",
+      "description": "Troisième date limite pour le programme 'Rayonner au Canada et à l'international'.",
+      "date": "2026-09-02",
+      "category": "subvention",
+      "recurrence": "annual",
+      "organization": "Conseil des arts du Canada",
+      "sourceUrl": "https://conseildesarts.ca/financement/subventions/rayonner-au-canada-et-a-l-international",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["arts", "international", "promotion"]
     }
   ]
 }
