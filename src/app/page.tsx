@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { EmailForm } from '@/components/EmailForm';
 import { getUpcomingEvents, formatDateFr, getDaysUntil, getCategoryMeta } from '@/lib/events';
 import Link from 'next/link';
 
@@ -199,20 +200,7 @@ export default function Home() {
               <p className="text-lg opacity-90 mb-8">
                 Inscrivez-vous gratuitement et ne manquez plus jamais une date importante.
               </p>
-              <form className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
-                <input
-                  type="email"
-                  placeholder="votre@email.com"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white outline-none"
-                  required
-                />
-                <Button variant="accent" className="py-3 px-6">
-                  S&apos;inscrire
-                </Button>
-              </form>
-              <p className="text-sm opacity-75 mt-4">
-                Gratuit. Pas de spam. Désinscription en un clic.
-              </p>
+              <EmailForm variant="dark" className="max-w-md mx-auto" />
             </div>
           </div>
         </section>
