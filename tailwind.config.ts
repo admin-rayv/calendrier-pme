@@ -37,12 +37,12 @@ const config: Config = {
           900: '#14532d',
           950: '#052e16',
         },
-        // Catégories - Palette pastel moderne
-        fiscal: '#6B9ECF',     // Bleu pastel doux
-        subvention: '#7DB895', // Vert sauge/menthe
-        legal: '#E8A87C',      // Pêche/corail doux
-        event: '#9B8DC2',      // Lavande
-        emploi: '#D4A5B5',     // Rose poudré
+        // Catégories - Palette Mint/Cyan harmonieuse
+        fiscal: '#19747E',     // Dark Cyan (principal)
+        subvention: '#4A9B8F', // Teal/Sage
+        legal: '#C49A6C',      // Caramel doux (contraste chaud)
+        event: '#6B9CAD',      // Steel blue
+        emploi: '#A89BB5',     // Lavande douce
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

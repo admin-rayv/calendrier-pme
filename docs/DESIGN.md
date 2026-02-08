@@ -2,22 +2,24 @@
 
 ## 🎨 Palette de couleurs
 
-### Couleurs principales
+### Palette de base
 
 | Nom | Hex | Usage |
 |-----|-----|-------|
-| Primary | `#3b82f6` | Actions principales, liens, headers |
-| Accent | `#22c55e` | Succès, confirmations, CTA secondaires |
+| Dark Cyan | `#19747E` | Actions principales, headers, CTA |
+| Light Blue | `#A9D6E5` | Accents, hover states |
+| Soft Mint | `#D1E8E2` | Backgrounds légers |
+| Platinum | `#E2E2E2` | Borders, séparateurs |
 
-### Couleurs par catégorie (Palette pastel)
+### Couleurs par catégorie
 
 | Catégorie | Hex | Emoji | Description |
 |-----------|-----|-------|-------------|
-| Fiscal | `#6B9ECF` | 💰 | Bleu pastel doux |
-| Subvention | `#7DB895` | 🎁 | Vert sauge/menthe |
-| Légal | `#E8A87C` | ⚖️ | Pêche/corail doux |
-| Événement | `#9B8DC2` | 📅 | Lavande |
-| Emploi | `#D4A5B5` | 👥 | Rose poudré |
+| Fiscal | `#19747E` | 💰 | Dark Cyan (principal) |
+| Subvention | `#4A9B8F` | 🎁 | Teal/Sage |
+| Légal | `#C49A6C` | ⚖️ | Caramel doux (contraste) |
+| Événement | `#6B9CAD` | 📅 | Steel blue |
+| Emploi | `#A89BB5` | 👥 | Lavande douce |
 
 ### Neutrals
 

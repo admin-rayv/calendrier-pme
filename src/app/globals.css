@@ -1,39 +1,44 @@
 @import 'tailwindcss';
 
 /* Custom theme using CSS variables for Tailwind v4 */
+/* Palette: Soft Mint #D1E8E2, Dark Cyan #19747E, Light Blue #A9D6E5, Platinum #E2E2E2 */
 @theme {
-  /* Primary colors - Soft blue pastel */
-  --color-primary-50: #f5f8fc;
-  --color-primary-100: #e8f0f8;
-  --color-primary-200: #d1e1f1;
-  --color-primary-300: #a8c8e4;
-  --color-primary-400: #89b5d9;
-  --color-primary-500: #6B9ECF;
-  --color-primary-600: #5a8bc0;
-  --color-primary-700: #4a78a8;
-  --color-primary-800: #3d628a;
-  --color-primary-900: #345270;
-  --color-primary-950: #243a50;
+  /* Primary colors - Dark Cyan */
+  --color-primary-50: #f0f7f8;
+  --color-primary-100: #d1e8e2;
+  --color-primary-200: #a9d6e5;
+  --color-primary-300: #7bc4d4;
+  --color-primary-400: #4ba8b8;
+  --color-primary-500: #19747E;
+  --color-primary-600: #156870;
+  --color-primary-700: #125962;
+  --color-primary-800: #0f4a52;
+  --color-primary-900: #0c3b42;
+  --color-primary-950: #082a2f;
 
-  /* Accent colors - Soft sage green */
-  --color-accent-50: #f4f9f6;
-  --color-accent-100: #e5f2eb;
-  --color-accent-200: #cce6d8;
-  --color-accent-300: #a5d4bc;
-  --color-accent-400: #8ec6a8;
-  --color-accent-500: #7DB895;
-  --color-accent-600: #6aa882;
-  --color-accent-700: #5a916f;
-  --color-accent-800: #4a755b;
-  --color-accent-900: #3e614c;
-  --color-accent-950: #2a4333;
+  /* Accent colors - Light Blue */
+  --color-accent-50: #f5fbfc;
+  --color-accent-100: #e8f5f8;
+  --color-accent-200: #d1ebf1;
+  --color-accent-300: #a9d6e5;
+  --color-accent-400: #7ec3d8;
+  --color-accent-500: #5bb0c8;
+  --color-accent-600: #4a9ab2;
+  --color-accent-700: #3d8196;
+  --color-accent-800: #33697a;
+  --color-accent-900: #2a5664;
+  --color-accent-950: #1d3a44;
 
-  /* Category colors - Pastel palette */
-  --color-fiscal: #6B9ECF;
-  --color-subvention: #7DB895;
-  --color-legal: #E8A87C;
-  --color-event: #9B8DC2;
-  --color-emploi: #D4A5B5;
+  /* Base colors */
+  --color-mint: #D1E8E2;
+  --color-platinum: #E2E2E2;
+
+  /* Category colors - Harmonious with palette */
+  --color-fiscal: #19747E;
+  --color-subvention: #4A9B8F;
+  --color-legal: #C49A6C;
+  --color-event: #6B9CAD;
+  --color-emploi: #A89BB5;
 
   /* Fonts */
   --font-sans: 'Inter', system-ui, sans-serif;
