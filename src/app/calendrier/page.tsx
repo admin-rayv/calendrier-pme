@@ -117,8 +117,8 @@ export default function CalendrierPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white mt-16 py-8">
+      {/* Footer - Bento Style */}
+      <footer className="bg-gradient-to-b from-white to-[#D1E8E2]/30 border-t-2 border-gray-100 mt-16 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
@@ -128,9 +128,9 @@ export default function CalendrierPage() {
               href="https://rayv.ca" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-[#19747E] transition-colors"
             >
-              Propulsé par <span className="font-bold">Ray<span className="text-[#DE7D18]">V</span></span>
+              Propulsé par <span className="font-bold text-gray-900">Ray<span className="text-[#DE7D18]">V</span></span>
             </a>
           </div>
         </div>
