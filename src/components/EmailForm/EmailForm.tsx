@@ -89,10 +89,10 @@ export function EmailForm({ variant = 'light', className = '' }: EmailFormProps)
           </svg>
         </div>
         <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
-          Inscription réussie! 🎉
+          Bienvenue! 🎉
         </h3>
         <p className={isDark ? 'text-white/80' : 'text-gray-600'}>
-          Vous recevrez des rappels avant chaque échéance importante.
+          Vous recevrez notre newsletter avec des conseils, événements et opportunités pour les PME québécoises.
         </p>
         <button
           onClick={() => setStatus('idle')}
@@ -172,7 +172,7 @@ export function EmailForm({ variant = 'light', className = '' }: EmailFormProps)
       )}
       
       <p className={`mt-3 text-sm ${isDark ? 'text-white/70' : 'text-gray-500'}`}>
-        Gratuit. Pas de spam. Désinscription en un clic.
+        Gratuit • 1-2 emails par mois • Désinscription en un clic
       </p>
     </form>
   );
