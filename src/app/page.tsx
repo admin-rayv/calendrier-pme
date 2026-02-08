@@ -69,11 +69,11 @@ export default function Home() {
                 100% gratuit pour les PME québécoises
               </div>
               
-              <h2 className="animate-fade-in-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
-                Ne manquez plus
+              <h1 className="animate-fade-in-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Calendrier des échéances PME
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#19747E] to-[#4A9B8F]">aucune échéance</span>
-              </h2>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#19747E] to-[#4A9B8F]">Québec 2026</span>
+              </h1>
               
               <p className="animate-fade-in-delay-2 text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
                 Toutes les dates importantes pour votre PME au même endroit.

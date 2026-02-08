@@ -12,52 +12,64 @@ const siteUrl = "https://calendrierpme.ca";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Calendrier PME Québec | Échéances fiscales, subventions et obligations",
+    default: "Calendrier PME Québec 2026 | Échéances fiscales, subventions et obligations légales",
     template: "%s | Calendrier PME Québec",
   },
   description:
-    "Ne manquez plus aucune échéance! Calendrier gratuit des dates importantes pour les PME québécoises: déclarations fiscales, subventions, obligations légales et événements business.",
+    "Calendrier gratuit des échéances PME au Québec pour 2026. Dates limites T2, TPS/TVQ, T4, Relevé 1, CNESST, RS&DE, subventions. Ne manquez plus aucune date fiscale ou légale importante pour votre entreprise.",
   keywords: [
-    "calendrier PME",
-    "échéances fiscales Québec",
-    "subventions PME",
+    "calendrier PME Québec",
+    "échéances fiscales 2026",
+    "date limite T2",
+    "date limite TPS TVQ",
+    "déclaration T4 Relevé 1",
+    "CNESST déclaration salaires",
+    "crédit RS&DE",
+    "subventions PME Québec",
     "obligations légales entreprise",
-    "T4 Relevé 1",
-    "TPS TVQ",
-    "CNESST",
-    "RS&DE",
     "entrepreneur Québec",
+    "petite entreprise Québec",
+    "dates importantes entreprise",
+    "rappel fiscal PME",
+    "calendrier entrepreneur",
   ],
   authors: [{ name: "Calendrier PME Québec" }],
   creator: "Calendrier PME Québec",
-  publisher: "Calendrier PME Québec",
+  publisher: "RayV",
   formatDetection: {
     email: false,
     telephone: false,
+  },
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      'fr-CA': siteUrl,
+    },
   },
   openGraph: {
     type: "website",
     locale: "fr_CA",
     url: siteUrl,
     siteName: "Calendrier PME Québec",
-    title: "Calendrier PME Québec | Toutes vos échéances en un seul endroit",
+    title: "Calendrier PME Québec 2026 | Toutes vos échéances en un seul endroit",
     description:
-      "Calendrier gratuit des dates importantes pour les PME québécoises. Échéances fiscales, subventions, obligations légales et événements.",
+      "Calendrier gratuit des dates importantes pour les PME québécoises. Échéances fiscales T2, TPS/TVQ, subventions, obligations légales. Mis à jour pour 2026.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Calendrier PME Québec - Ne manquez plus aucune échéance",
+        alt: "Calendrier PME Québec - Ne manquez plus aucune échéance fiscale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Calendrier PME Québec | Échéances fiscales et subventions",
+    title: "Calendrier PME Québec 2026 | Échéances fiscales et subventions",
     description:
-      "Calendrier gratuit des dates importantes pour les PME québécoises.",
-    images: ["/og-image.png"],
+      "Calendrier gratuit des dates limites fiscales, subventions et obligations pour les PME québécoises.",
+    images: ["/opengraph-image"],
+    creator: "@RayV_ca",
   },
   robots: {
     index: true,
@@ -70,6 +82,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  category: "business",
   verification: {
     // Add Google Search Console verification when available
     // google: "verification-code",

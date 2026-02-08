@@ -109,32 +109,54 @@ export const homePageSchema = {
 // Schema pour la page calendrier
 export const calendarPageSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://calendrierpme.ca/calendrier",
-  "name": "Calendrier des échéances PME Québec",
-  "description": "Consultez toutes les dates importantes pour votre PME: échéances fiscales, subventions, obligations légales et événements.",
-  "isPartOf": {
-    "@id": "https://calendrierpme.ca/#website"
-  },
-  "about": {
-    "@type": "Thing",
-    "name": "Échéances fiscales et administratives des PME au Québec"
-  },
-  "mentions": [
+  "@graph": [
     {
-      "@type": "GovernmentOrganization",
-      "name": "Revenu Québec",
-      "url": "https://www.revenuquebec.ca"
+      "@type": "WebPage",
+      "@id": "https://calendrierpme.ca/calendrier",
+      "name": "Calendrier des échéances fiscales PME Québec 2026",
+      "description": "Calendrier interactif des dates limites fiscales, subventions et obligations légales pour les PME au Québec en 2026.",
+      "url": "https://calendrierpme.ca/calendrier",
+      "isPartOf": {
+        "@id": "https://calendrierpme.ca/#website"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Échéances fiscales et administratives des PME au Québec"
+      },
+      "mentions": [
+        {
+          "@type": "GovernmentOrganization",
+          "name": "Revenu Québec",
+          "url": "https://www.revenuquebec.ca"
+        },
+        {
+          "@type": "GovernmentOrganization", 
+          "name": "Agence du revenu du Canada",
+          "url": "https://www.canada.ca/fr/agence-revenu.html"
+        },
+        {
+          "@type": "GovernmentOrganization",
+          "name": "CNESST",
+          "url": "https://www.cnesst.gouv.qc.ca"
+        }
+      ]
     },
     {
-      "@type": "GovernmentOrganization", 
-      "name": "Agence du revenu du Canada",
-      "url": "https://www.canada.ca/fr/agence-revenu.html"
-    },
-    {
-      "@type": "GovernmentOrganization",
-      "name": "CNESST",
-      "url": "https://www.cnesst.gouv.qc.ca"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://calendrierpme.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calendrier",
+          "item": "https://calendrierpme.ca/calendrier"
+        }
+      ]
     }
   ]
 };
