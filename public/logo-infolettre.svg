@@ -1,0 +1,15 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background rounded square -->
+  <rect width="400" height="400" rx="80" fill="url(#gradient)"/>
+  
+  <!-- Letter C -->
+  <text x="200" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="240" font-weight="800" fill="white">C</text>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#19747E"/>
+      <stop offset="100%" style="stop-color:#4A9B8F"/>
+    </linearGradient>
+  </defs>
+</svg>
