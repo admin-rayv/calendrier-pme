@@ -419,7 +419,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl border-2 border-white/20 p-8 sm:p-12 text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
-                  Newsletter pour entrepreneurs
+                  Infolettre pour entrepreneurs
                 </h2>
                 <p className="text-lg text-white/90 mb-8">
                   Conseils, événements et opportunités pour les PME québécoises. Directement dans votre boîte.

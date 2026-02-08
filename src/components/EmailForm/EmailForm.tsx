@@ -92,7 +92,7 @@ export function EmailForm({ variant = 'light', className = '' }: EmailFormProps)
           Bienvenue! 🎉
         </h3>
         <p className={isDark ? 'text-white/80' : 'text-gray-600'}>
-          Vous recevrez notre newsletter avec des conseils, événements et opportunités pour les PME québécoises.
+          Vous recevrez notre infolettre avec des conseils, événements et opportunités pour les PME québécoises.
         </p>
         <button
           onClick={() => setStatus('idle')}
