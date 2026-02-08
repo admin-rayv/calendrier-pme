@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "lastUpdated": "2026-02-08",
   "events": [
     {
@@ -469,6 +469,84 @@
       "applicableTo": ["all"],
       "priority": "high",
       "tags": ["salon", "networking", "formation", "PME"]
+    },
+    {
+      "id": "subvention-008",
+      "title": "PROMPT - Approbation projets numériques",
+      "description": "Date limite pour faire approuver les projets de transformation numérique dans le cadre du programme PROMPT.",
+      "date": "2026-01-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "PROMPT Québec",
+      "sourceUrl": "https://promptinnov.com/",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "high",
+      "tags": ["numérique", "innovation", "TIC"]
+    },
+    {
+      "id": "subvention-009",
+      "title": "PROMPT - Remise projets numériques",
+      "description": "Date limite pour remettre les projets approuvés dans le cadre du programme PROMPT.",
+      "date": "2026-02-28",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "PROMPT Québec",
+      "sourceUrl": "https://promptinnov.com/",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "high",
+      "tags": ["numérique", "innovation", "TIC"]
+    },
+    {
+      "id": "subvention-010",
+      "title": "PROMPT - Fermeture du programme",
+      "description": "Date de fermeture de l'initiative PROMPT pour les projets de transformation numérique.",
+      "date": "2026-03-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "PROMPT Québec",
+      "sourceUrl": "https://promptinnov.com/",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["numérique", "innovation", "TIC"]
+    },
+    {
+      "id": "subvention-011",
+      "title": "RS&DE - Demande crédit d'impôt fédéral",
+      "description": "Date limite pour demander le crédit d'impôt RS&DE (Recherche Scientifique et Développement Expérimental) pour l'année d'imposition 2024. 18 mois après la fin d'année d'imposition.",
+      "date": "2026-06-30",
+      "category": "subvention",
+      "recurrence": "annual",
+      "organization": "ARC",
+      "sourceUrl": "https://www.canada.ca/fr/agence-revenu/services/recherche-scientifique-developpement-experimental-programme-encouragements-fiscaux.html",
+      "applicableTo": ["incorporated"],
+      "priority": "high",
+      "tags": ["R&D", "crédit impôt", "innovation"]
+    },
+    {
+      "id": "event-013",
+      "title": "Tr@ns Num 2026 - Conférence ADRIQ",
+      "description": "Conférence sur la transformation numérique organisée par l'ADRIQ. Rendez-vous des leaders du numérique et de l'innovation au Québec.",
+      "date": "2026-03-19",
+      "category": "event",
+      "recurrence": "annual",
+      "organization": "ADRIQ",
+      "sourceUrl": "https://www.adriq.com/evenements/",
+      "applicableTo": ["all"],
+      "priority": "medium",
+      "tags": ["numérique", "transformation", "conférence"]
+    },
+    {
+      "id": "subvention-012",
+      "title": "Montréal inclusive - Fin projets",
+      "description": "Date limite pour compléter les projets retenus dans le cadre de l'appel Montréal inclusive 2025-2026.",
+      "date": "2026-03-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "Ville de Montréal",
+      "sourceUrl": "https://montreal.ca/programmes/appel-de-projets-montreal-inclusive-2025-2026",
+      "applicableTo": ["incorporated"],
+      "priority": "low",
+      "tags": ["montréal", "inclusion", "social"]
     }
   ]
 }
