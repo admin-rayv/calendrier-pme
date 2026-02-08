@@ -7,12 +7,13 @@ interface BadgeProps {
   children?: ReactNode;
 }
 
+// Colors adjusted for WCAG AA contrast ratio (4.5:1 minimum)
 const categoryStyles: Record<Category, string> = {
-  fiscal: 'bg-[#19747E]/10 text-[#19747E] border-[#19747E]/30',
-  subvention: 'bg-[#4A9B8F]/10 text-[#3d817a] border-[#4A9B8F]/30',
-  legal: 'bg-[#C49A6C]/10 text-[#a07d52] border-[#C49A6C]/30',
-  event: 'bg-[#6B9CAD]/10 text-[#567d8a] border-[#6B9CAD]/30',
-  emploi: 'bg-[#A89BB5]/10 text-[#877a96] border-[#A89BB5]/30',
+  fiscal: 'bg-[#19747E]/10 text-[#145f66] border-[#19747E]/30',
+  subvention: 'bg-[#4A9B8F]/10 text-[#2d6b62] border-[#4A9B8F]/30',
+  legal: 'bg-[#C49A6C]/10 text-[#7a5c3a] border-[#C49A6C]/30',
+  event: 'bg-[#6B9CAD]/10 text-[#3d6878] border-[#6B9CAD]/30',
+  emploi: 'bg-[#A89BB5]/10 text-[#5f5470] border-[#A89BB5]/30',
 };
 
 const categoryLabels: Record<Category, string> = {

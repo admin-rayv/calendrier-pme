@@ -115,9 +115,9 @@ export default function Home() {
         {/* Comment ça marche - Bento Style */}
         <section id="comment-ca-marche" className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12">
               Comment ça marche
-            </h3>
+            </h2>
             <div className="grid md:grid-cols-3 gap-5 max-w-4xl mx-auto">
               <div className="bg-gradient-to-br from-[#D1E8E2]/60 to-white rounded-3xl border-2 border-[#19747E]/10 p-8 text-center hover:border-[#19747E]/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-5 border-2 border-[#19747E]/20">
@@ -153,9 +153,9 @@ export default function Home() {
         {/* Aperçu des prochaines échéances - Bento Style */}
         <section className="py-12 sm:py-16 bg-[#D1E8E2]/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               Prochaines échéances
-            </h3>
+            </h2>
             <p className="text-center text-gray-600 mb-8">
               Voici les dates à ne pas manquer
             </p>
@@ -181,10 +181,10 @@ export default function Home() {
                       <Badge category={event.category} />
                       <span className={`text-sm font-bold px-3 py-1 rounded-lg ${
                         daysUntil <= 7 
-                          ? 'bg-red-50 text-red-600 border border-red-200' 
+                          ? 'bg-red-50 text-red-700 border border-red-200' 
                           : daysUntil <= 30 
-                            ? 'bg-amber-50 text-amber-600 border border-amber-200' 
-                            : 'bg-gray-50 text-gray-600 border border-gray-200'
+                            ? 'bg-amber-50 text-amber-700 border border-amber-200' 
+                            : 'bg-gray-50 text-gray-700 border border-gray-200'
                       }`}>
                         {daysUntil === 0 ? "Aujourd&apos;hui" : daysUntil === 1 ? 'Demain' : `${daysUntil}j`}
                       </span>
@@ -204,9 +204,9 @@ export default function Home() {
         {/* Categories - Bento Grid */}
         <section id="categories" className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               5 catégories essentielles
-            </h3>
+            </h2>
             <p className="text-center text-gray-600 mb-12">
               Tout ce dont votre PME a besoin pour rester organisée
             </p>
@@ -275,9 +275,9 @@ export default function Home() {
         {/* FAQ Section - Critical for GEO */}
         <section id="faq" className="py-12 sm:py-16 bg-[#D1E8E2]/20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               Questions fréquentes
-            </h3>
+            </h2>
             <p className="text-center text-gray-600 mb-12">
               Les réponses aux questions les plus posées par les entrepreneurs québécois
             </p>
@@ -364,9 +364,9 @@ export default function Home() {
         {/* Sources officielles */}
         <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               Sources officielles
-            </h3>
+            </h2>
             <p className="text-center text-gray-600 mb-10">
               Nos informations proviennent directement des organismes gouvernementaux
             </p>
@@ -411,9 +411,9 @@ export default function Home() {
         <section className="py-12 sm:py-16 bg-primary-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center text-white">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Recevez les rappels par email
-              </h3>
+              </h2>
               <p className="text-lg opacity-90 mb-8">
                 Inscrivez-vous gratuitement et ne manquez plus jamais une date importante.
               </p>
@@ -458,7 +458,7 @@ export default function Home() {
             </div>
             
             <div>
-              <h5 className="font-bold mb-6 text-white">Catégories</h5>
+              <p className="font-bold text-lg mb-6 text-white">Catégories</p>
               <ul className="space-y-3 text-gray-400">
                 <li><Link href="/calendrier" className="hover:text-white transition-colors">Fiscal</Link></li>
                 <li><Link href="/calendrier" className="hover:text-white transition-colors">Subventions</Link></li>
@@ -469,7 +469,7 @@ export default function Home() {
             </div>
             
             <div>
-              <h5 className="font-bold mb-6 text-white">Liens</h5>
+              <p className="font-bold text-lg mb-6 text-white">Liens</p>
               <ul className="space-y-3 text-gray-400">
                 <li><Link href="/calendrier" className="hover:text-white transition-colors">Calendrier</Link></li>
                 <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
