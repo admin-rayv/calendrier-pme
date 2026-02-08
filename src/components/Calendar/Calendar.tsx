@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect, useCallback } from 'react';
 import { CalendarEvent, EventCategory } from '@/types/event';
 import { getAllEvents, getCategoryMeta, formatDateFr, getDaysUntil } from '@/lib/events';
 import { Badge } from '@/components/ui/Badge';
-import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 
 const DAYS = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
@@ -190,12 +189,12 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
         </Button>
       </div>
 
-      {/* Calendar Grid */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      {/* Calendar Grid - Bento Style */}
+      <div className="bg-white rounded-3xl border-2 border-gray-200 overflow-hidden">
         {/* Days Header */}
-        <div className="grid grid-cols-7 bg-gray-50 border-b border-gray-200">
+        <div className="grid grid-cols-7 bg-gradient-to-r from-[#D1E8E2]/50 to-[#A9D6E5]/30">
           {DAYS.map(day => (
-            <div key={day} className="py-3 text-center text-sm font-semibold text-gray-600">
+            <div key={day} className="py-4 text-center text-sm font-semibold text-[#19747E]">
               {day}
             </div>
           ))}
@@ -205,30 +204,32 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
         <div className="grid grid-cols-7">
           {calendarDays.map((day, index) => {
             const dayEvents = day ? eventsByDay.get(day) || [] : [];
+            const hasEvents = dayEvents.length > 0;
             return (
               <div
                 key={index}
-                className={`min-h-[100px] sm:min-h-[120px] p-1 sm:p-2 border-b border-r border-gray-100 ${
-                  day === null ? 'bg-gray-50' : 'bg-white'
-                } ${isToday(day!) ? 'bg-primary-50' : ''}`}
+                className={`min-h-[100px] sm:min-h-[120px] p-2 sm:p-3 border-t-2 border-l-2 border-gray-100 transition-colors duration-150 ${
+                  day === null ? 'bg-gray-50/50' : hasEvents ? 'bg-white hover:bg-[#D1E8E2]/20' : 'bg-white'
+                } ${isToday(day!) ? 'bg-[#D1E8E2]/40 ring-2 ring-inset ring-[#19747E]/30' : ''}`}
               >
                 {day !== null && (
                   <>
-                    <div className={`text-sm font-medium mb-1 ${
-                      isToday(day) ? 'text-primary-600 font-bold' : 'text-gray-700'
+                    <div className={`text-sm font-semibold mb-2 ${
+                      isToday(day) ? 'text-[#19747E] text-base' : 'text-gray-600'
                     }`}>
                       {day}
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-1.5">
                       {dayEvents.slice(0, 3).map(event => {
                         const meta = getCategoryMeta(event.category);
                         return (
                           <button
                             key={event.id}
                             onClick={() => setSelectedEvent(event)}
-                            className="w-full text-left px-1.5 py-0.5 rounded text-xs truncate hover:opacity-80 transition-opacity"
+                            className="w-full text-left px-2 py-1 rounded-lg text-xs font-medium truncate transition-all duration-150 hover:scale-[1.02] border"
                             style={{
-                              backgroundColor: meta?.color + '20',
+                              backgroundColor: meta?.color + '15',
+                              borderColor: meta?.color + '40',
                               color: meta?.color,
                             }}
                             title={event.title}
@@ -238,7 +239,7 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                         );
                       })}
                       {dayEvents.length > 3 && (
-                        <div className="text-xs text-gray-500 px-1">
+                        <div className="text-xs text-[#19747E] font-medium px-1">
                           +{dayEvents.length - 3} autres
                         </div>
                       )}
@@ -256,42 +257,44 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
         {monthEvents.length} événement{monthEvents.length !== 1 ? 's' : ''} ce mois
       </p>
 
-      {/* Event Detail Modal */}
+      {/* Event Detail Modal - Bento Style */}
       {selectedEvent && (
         <div 
-          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 z-50"
           onClick={() => setSelectedEvent(null)}
         >
-          <Card 
-            className="max-w-lg w-full max-h-[80vh] overflow-y-auto"
+          <div 
+            className="bg-white rounded-3xl border-2 border-gray-200 p-8 max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl"
             onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
-            <div className="flex justify-between items-start mb-4">
+            <div className="flex justify-between items-start mb-6">
               <Badge category={selectedEvent.category} />
               <button
                 onClick={() => setSelectedEvent(null)}
-                className="text-gray-400 hover:text-gray-600 text-xl"
+                className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 flex items-center justify-center text-xl transition-colors"
               >
                 ×
               </button>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">
               {selectedEvent.title}
             </h3>
-            <p className="text-sm text-primary-600 font-medium mb-4">
-              📅 {formatDateFr(selectedEvent.date)}
-              <span className="text-gray-500 ml-2">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#D1E8E2]/50 mb-6">
+              <span className="text-[#19747E] font-semibold">
+                📅 {formatDateFr(selectedEvent.date)}
+              </span>
+              <span className="text-[#19747E]/70 text-sm">
                 ({getDaysUntil(selectedEvent.date) >= 0 
                   ? `dans ${getDaysUntil(selectedEvent.date)} jours` 
                   : 'Passé'})
               </span>
-            </p>
-            <p className="text-gray-600 mb-4">
+            </div>
+            <p className="text-gray-600 mb-6 leading-relaxed">
               {selectedEvent.description}
             </p>
             {selectedEvent.organization && (
-              <p className="text-sm text-gray-500 mb-2">
-                <strong>Organisation:</strong> {selectedEvent.organization}
+              <p className="text-sm text-gray-500 mb-3">
+                <span className="font-semibold text-gray-700">Organisation:</span> {selectedEvent.organization}
               </p>
             )}
             {selectedEvent.sourceUrl && (
@@ -299,18 +302,18 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                 href={selectedEvent.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-sm text-primary-600 hover:underline"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#19747E]/10 text-[#19747E] font-medium text-sm hover:bg-[#19747E]/20 transition-colors"
               >
                 🔗 Source officielle →
               </a>
             )}
             {selectedEvent.tags && selectedEvent.tags.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-gray-100">
+              <div className="mt-6 pt-6 border-t-2 border-gray-100">
                 <div className="flex flex-wrap gap-2">
                   {selectedEvent.tags.map(tag => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded"
+                      className="px-3 py-1.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-lg"
                     >
                       #{tag}
                     </span>
@@ -318,7 +321,7 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                 </div>
               </div>
             )}
-          </Card>
+          </div>
         </div>
       )}
     </div>
