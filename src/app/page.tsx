@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { getUpcomingEvents, formatDateFr, getDaysUntil, getCategoryMeta } from '@/lib/events';
+import Link from 'next/link';
 
 export default function Home() {
   const upcomingEvents = getUpcomingEvents(5);
@@ -37,19 +38,23 @@ export default function Home() {
                 Échéances fiscales, subventions, obligations légales et plus encore.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button variant="primary" className="text-lg px-8 py-3">
-                  Voir le calendrier
-                </Button>
-                <Button variant="secondary" className="text-lg px-8 py-3">
-                  En savoir plus
-                </Button>
+                <Link href="/calendrier">
+                  <Button variant="primary" className="text-lg px-8 py-3 w-full sm:w-auto">
+                    Voir le calendrier
+                  </Button>
+                </Link>
+                <a href="#comment-ca-marche">
+                  <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
+                    En savoir plus
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Comment ça marche */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section id="comment-ca-marche" className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12">
               Comment ça marche
@@ -119,7 +124,9 @@ export default function Home() {
               })}
             </div>
             <div className="text-center mt-8">
-              <Button variant="primary">Voir tout le calendrier</Button>
+              <Link href="/calendrier">
+                <Button variant="primary">Voir tout le calendrier</Button>
+              </Link>
             </div>
           </div>
         </section>
