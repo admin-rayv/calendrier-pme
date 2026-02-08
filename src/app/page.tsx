@@ -302,7 +302,7 @@ export default function Home() {
               </div>
               <p className="text-gray-400 mb-6 max-w-sm">
                 L&apos;outil gratuit pour ne jamais manquer une échéance importante.
-                Conçu avec ❤️ pour les PME québécoises.
+                Conçu pour les PME québécoises.
               </p>
               
               {/* Propulsé par RayV */}
@@ -322,11 +322,11 @@ export default function Home() {
             <div>
               <h5 className="font-bold mb-6 text-white">Catégories</h5>
               <ul className="space-y-3 text-gray-400">
-                <li><Link href="/calendrier" className="hover:text-white transition-colors">💰 Fiscal</Link></li>
-                <li><Link href="/calendrier" className="hover:text-white transition-colors">🎁 Subventions</Link></li>
-                <li><Link href="/calendrier" className="hover:text-white transition-colors">⚖️ Légal</Link></li>
-                <li><Link href="/calendrier" className="hover:text-white transition-colors">👥 Emploi</Link></li>
-                <li><Link href="/calendrier" className="hover:text-white transition-colors">📅 Événements</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Fiscal</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Subventions</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Légal</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Emploi</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Événements</Link></li>
               </ul>
             </div>
             
