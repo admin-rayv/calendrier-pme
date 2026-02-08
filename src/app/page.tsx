@@ -35,8 +35,8 @@ export default function Home() {
               <a href="#categories" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
                 Catégories
               </a>
-              <a href="#comment-ca-marche" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
-                Comment ça marche
+              <a href="#faq" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
+                FAQ
               </a>
             </nav>
             
@@ -472,7 +472,7 @@ export default function Home() {
               <h5 className="font-bold mb-6 text-white">Liens</h5>
               <ul className="space-y-3 text-gray-400">
                 <li><Link href="/calendrier" className="hover:text-white transition-colors">Calendrier</Link></li>
-                <li><a href="#comment-ca-marche" className="hover:text-white transition-colors">Comment ça marche</a></li>
+                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
                 <li><a href="mailto:info@calendrierpme.ca" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
