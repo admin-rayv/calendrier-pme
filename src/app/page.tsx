@@ -40,9 +40,11 @@ export default function Home() {
               </a>
             </nav>
             
-            <Button variant="primary" className="text-sm sm:text-base">
-              S&apos;inscrire
-            </Button>
+            <a href="#infolettre">
+              <Button variant="primary" className="text-sm sm:text-base">
+                S&apos;inscrire
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -408,7 +410,7 @@ export default function Home() {
         </section>
 
         {/* CTA Email Section - Bento Style */}
-        <section className="py-12 sm:py-16 bg-gradient-to-br from-[#19747E] via-[#19747E] to-[#4A9B8F] relative overflow-hidden">
+        <section id="infolettre" className="py-12 sm:py-16 bg-gradient-to-br from-[#19747E] via-[#19747E] to-[#4A9B8F] relative overflow-hidden">
           {/* Decorative shapes */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
             <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full bg-white"></div>
