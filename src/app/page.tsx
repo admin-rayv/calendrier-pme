@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { EmailForm } from '@/components/EmailForm';
+import { JsonLd, homePageSchema } from '@/components/JsonLd';
 import { getUpcomingEvents, formatDateFr, getDaysUntil, getCategoryMeta } from '@/lib/events';
 import Link from 'next/link';
 
@@ -9,6 +10,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Structured Data for SEO/GEO */}
+      <JsonLd data={homePageSchema} />
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -265,6 +268,141 @@ export default function Home() {
                   <Badge category="event" />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section - Critical for GEO */}
+        <section id="faq" className="py-12 sm:py-16 bg-[#D1E8E2]/20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+              Questions fréquentes
+            </h3>
+            <p className="text-center text-gray-600 mb-12">
+              Les réponses aux questions les plus posées par les entrepreneurs québécois
+            </p>
+            
+            <div className="space-y-4">
+              <details className="group bg-white rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/30 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h4 className="font-bold text-gray-900 pr-4">Quand dois-je produire ma déclaration T2 (impôts des sociétés)?</h4>
+                  <span className="text-[#19747E] text-2xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600">
+                  <p>La déclaration T2 doit être produite dans les <strong>6 mois suivant la fin de votre exercice financier</strong>. Par exemple, si votre année fiscale se termine le 31 décembre, vous avez jusqu&apos;au 30 juin pour produire.</p>
+                  <p className="mt-2">Le paiement des impôts est dû dans les 2 ou 3 mois selon votre situation (SPCC ou non).</p>
+                  <a href="https://www.canada.ca/fr/agence-revenu/services/impot/entreprises/sujets/societes/declarations-revenus-societes/produire-declaration-revenus-societes.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#19747E] hover:underline mt-3 text-sm font-medium">
+                    Source: Agence du revenu du Canada →
+                  </a>
+                </div>
+              </details>
+              
+              <details className="group bg-white rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/30 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h4 className="font-bold text-gray-900 pr-4">Quelles sont les dates limites pour la TPS/TVQ?</h4>
+                  <span className="text-[#19747E] text-2xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600">
+                  <p>Les dates varient selon votre période de déclaration:</p>
+                  <ul className="list-disc list-inside mt-2 space-y-1">
+                    <li><strong>Annuelle:</strong> 3 mois après la fin d&apos;exercice</li>
+                    <li><strong>Trimestrielle:</strong> 1 mois après la fin du trimestre</li>
+                    <li><strong>Mensuelle:</strong> 1 mois après la fin du mois</li>
+                  </ul>
+                  <p className="mt-2">La plupart des PME produisent trimestriellement.</p>
+                  <a href="https://www.revenuquebec.ca/fr/entreprises/taxes/tpstvh-et-tvq/declaration-de-la-tps-et-de-la-tvq/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#19747E] hover:underline mt-3 text-sm font-medium">
+                    Source: Revenu Québec →
+                  </a>
+                </div>
+              </details>
+              
+              <details className="group bg-white rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/30 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h4 className="font-bold text-gray-900 pr-4">C&apos;est quoi le crédit RS&DE et quand faire ma demande?</h4>
+                  <span className="text-[#19747E] text-2xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600">
+                  <p>Le <strong>RS&DE</strong> (Recherche scientifique et développement expérimental) est un crédit d&apos;impôt pour les entreprises qui font de l&apos;innovation. C&apos;est un des crédits les plus généreux au Canada!</p>
+                  <p className="mt-2">La demande doit être faite avec votre déclaration T2, donc dans les <strong>6 mois suivant la fin de votre exercice</strong>.</p>
+                  <a href="https://www.canada.ca/fr/agence-revenu/services/recherche-scientifique-developpement-experimental-programme-encouragements-fiscaux.html" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#19747E] hover:underline mt-3 text-sm font-medium">
+                    Source: Programme RS&DE - ARC →
+                  </a>
+                </div>
+              </details>
+              
+              <details className="group bg-white rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/30 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h4 className="font-bold text-gray-900 pr-4">Quand dois-je remettre les T4 et Relevé 1 à mes employés?</h4>
+                  <span className="text-[#19747E] text-2xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600">
+                  <p>Les feuillets <strong>T4</strong> (fédéral) et <strong>Relevé 1</strong> (Québec) doivent être remis aux employés au plus tard le <strong>28 février</strong> de l&apos;année suivante.</p>
+                  <p className="mt-2">Par exemple, pour l&apos;année 2025, la date limite est le 28 février 2026.</p>
+                  <a href="https://www.revenuquebec.ca/fr/entreprises/retenues-et-cotisations/produire-les-releves-et-le-sommaire/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#19747E] hover:underline mt-3 text-sm font-medium">
+                    Source: Revenu Québec →
+                  </a>
+                </div>
+              </details>
+              
+              <details className="group bg-white rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/30 transition-colors">
+                <summary className="flex items-center justify-between p-6 cursor-pointer">
+                  <h4 className="font-bold text-gray-900 pr-4">Quelles sont les obligations CNESST pour les employeurs?</h4>
+                  <span className="text-[#19747E] text-2xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <div className="px-6 pb-6 text-gray-600">
+                  <p>Vous devez produire votre <strong>Déclaration des salaires</strong> à la CNESST avant le <strong>15 mars</strong> de chaque année.</p>
+                  <p className="mt-2">Cette déclaration sert à calculer votre prime d&apos;assurance pour les accidents de travail. Le paiement peut être fait en un versement ou étalé sur l&apos;année.</p>
+                  <a href="https://www.cnesst.gouv.qc.ca/fr/demarches-formulaires/employeurs/declaration-salaires" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-[#19747E] hover:underline mt-3 text-sm font-medium">
+                    Source: CNESST →
+                  </a>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* Sources officielles */}
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
+              Sources officielles
+            </h3>
+            <p className="text-center text-gray-600 mb-10">
+              Nos informations proviennent directement des organismes gouvernementaux
+            </p>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <a href="https://www.revenuquebec.ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/40 hover:bg-[#D1E8E2]/10 transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-[#19747E]/10 flex items-center justify-center text-lg transition-colors">🏛️</div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">Revenu Québec</p>
+                  <p className="text-xs text-gray-500">Taxes et impôts QC</p>
+                </div>
+              </a>
+              
+              <a href="https://www.canada.ca/fr/agence-revenu.html" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/40 hover:bg-[#D1E8E2]/10 transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-[#19747E]/10 flex items-center justify-center text-lg transition-colors">🍁</div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">ARC</p>
+                  <p className="text-xs text-gray-500">Agence du revenu Canada</p>
+                </div>
+              </a>
+              
+              <a href="https://www.cnesst.gouv.qc.ca" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/40 hover:bg-[#D1E8E2]/10 transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-[#19747E]/10 flex items-center justify-center text-lg transition-colors">🦺</div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">CNESST</p>
+                  <p className="text-xs text-gray-500">Santé et sécurité</p>
+                </div>
+              </a>
+              
+              <a href="https://www.investquebec.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-4 rounded-2xl border-2 border-gray-200 hover:border-[#19747E]/40 hover:bg-[#D1E8E2]/10 transition-all group">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 group-hover:bg-[#19747E]/10 flex items-center justify-center text-lg transition-colors">💼</div>
+                <div>
+                  <p className="font-bold text-gray-900 text-sm">Investissement QC</p>
+                  <p className="text-xs text-gray-500">Subventions et prêts</p>
+                </div>
+              </a>
             </div>
           </div>
         </section>

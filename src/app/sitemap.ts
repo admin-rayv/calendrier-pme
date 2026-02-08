@@ -1,20 +1,19 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://calendrierpme.ca';
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const baseUrl = 'https://calendrierpme.ca';
+  const currentDate = new Date().toISOString();
 
   return [
     {
       url: baseUrl,
-      lastModified: now,
+      lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/calendrier`,
-      lastModified: now,
+      lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 0.9,
     },

@@ -1,5 +1,6 @@
 import { Calendar } from '@/components/Calendar';
 import { Button } from '@/components/ui/Button';
+import { JsonLd, calendarPageSchema } from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata = {
@@ -10,6 +11,8 @@ export const metadata = {
 export default function CalendrierPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Structured Data for SEO/GEO */}
+      <JsonLd data={calendarPageSchema} />
       {/* Header */}
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
