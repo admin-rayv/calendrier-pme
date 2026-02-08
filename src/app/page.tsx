@@ -10,12 +10,33 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl sm:text-2xl font-bold text-primary-600">
-              📅 Calendrier PME
-            </h1>
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#19747E] to-[#4A9B8F] flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-105 transition-transform">
+                C
+              </div>
+              <div className="hidden sm:block">
+                <span className="font-extrabold text-xl text-gray-900">Calendrier</span>
+                <span className="font-extrabold text-xl text-[#19747E]">PME</span>
+              </div>
+            </Link>
+            
+            {/* Nav */}
+            <nav className="hidden md:flex items-center gap-8">
+              <Link href="/calendrier" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
+                Calendrier
+              </Link>
+              <a href="#categories" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
+                Catégories
+              </a>
+              <a href="#comment-ca-marche" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
+                Comment ça marche
+              </a>
+            </nav>
+            
             <Button variant="primary" className="text-sm sm:text-base">
               S&apos;inscrire
             </Button>
@@ -26,28 +47,63 @@ export default function Home() {
       {/* Main Content */}
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-white to-gray-50 py-12 sm:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#D1E8E2]/30 to-[#A9D6E5]/20 py-16 sm:py-24">
+          {/* Animated background shapes */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[#19747E]/5 animate-float"></div>
+            <div className="absolute top-20 -left-20 w-60 h-60 rounded-full bg-[#A9D6E5]/20 animate-float-delay"></div>
+            <div className="absolute bottom-10 right-1/4 w-40 h-40 rounded-full bg-[#D1E8E2]/40 animate-float"></div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Ne manquez plus aucune
-                <span className="text-primary-600"> échéance</span>
+              {/* Badge */}
+              <div className="animate-fade-in inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#19747E]/10 border border-[#19747E]/20 text-[#19747E] text-sm font-semibold mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#19747E] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#19747E]"></span>
+                </span>
+                100% gratuit pour les PME québécoises
+              </div>
+              
+              <h2 className="animate-fade-in-delay-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Ne manquez plus
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#19747E] to-[#4A9B8F]">aucune échéance</span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8">
-                Toutes les dates importantes pour votre PME québécoise au même endroit.
-                Échéances fiscales, subventions, obligations légales et plus encore.
+              
+              <p className="animate-fade-in-delay-2 text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Toutes les dates importantes pour votre PME au même endroit.
+                Fiscal, subventions, légal — on s&apos;occupe de tout.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              
+              <div className="animate-fade-in-delay-3 flex flex-col sm:flex-row justify-center gap-4">
                 <Link href="/calendrier">
-                  <Button variant="primary" className="text-lg px-8 py-3 w-full sm:w-auto">
-                    Voir le calendrier
+                  <Button variant="primary" className="text-lg px-8 py-4 w-full sm:w-auto shadow-lg hover:shadow-xl transition-shadow">
+                    Voir le calendrier →
                   </Button>
                 </Link>
                 <a href="#comment-ca-marche">
-                  <Button variant="secondary" className="text-lg px-8 py-3 w-full sm:w-auto">
+                  <Button variant="secondary" className="text-lg px-8 py-4 w-full sm:w-auto">
                     En savoir plus
                   </Button>
                 </a>
+              </div>
+              
+              {/* Trust badges */}
+              <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">✓</span>
+                  <span>58+ échéances</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">✓</span>
+                  <span>Mis à jour pour 2026</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">✓</span>
+                  <span>Rappels email gratuits</span>
+                </div>
               </div>
             </div>
           </div>
@@ -143,7 +199,7 @@ export default function Home() {
         </section>
 
         {/* Categories - Bento Grid */}
-        <section className="py-12 sm:py-16 bg-white">
+        <section id="categories" className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-4">
               5 catégories essentielles
@@ -230,37 +286,68 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-gray-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
-              <h4 className="text-xl font-bold mb-4">📅 Calendrier PME Québec</h4>
-              <p className="text-gray-400 mb-4">
+              {/* Footer Logo */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#19747E] to-[#4A9B8F] flex items-center justify-center text-white font-bold text-lg">
+                  C
+                </div>
+                <div>
+                  <span className="font-extrabold text-xl text-white">Calendrier</span>
+                  <span className="font-extrabold text-xl text-[#4A9B8F]">PME</span>
+                </div>
+              </div>
+              <p className="text-gray-400 mb-6 max-w-sm">
                 L&apos;outil gratuit pour ne jamais manquer une échéance importante.
-                Conçu pour les PME québécoises.
+                Conçu avec ❤️ pour les PME québécoises.
               </p>
+              
+              {/* Propulsé par RayV */}
+              <a 
+                href="https://rayv.ca" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+              >
+                <span className="text-gray-400 text-sm">Propulsé par</span>
+                <span className="font-bold text-white group-hover:text-[#DE7D18] transition-colors">
+                  Ray<span className="text-[#DE7D18]">V</span>
+                </span>
+              </a>
             </div>
+            
             <div>
-              <h5 className="font-semibold mb-4">Catégories</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">💰 Fiscal</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">🎁 Subventions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">⚖️ Légal</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">👥 Emploi</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">📅 Événements</a></li>
+              <h5 className="font-bold mb-6 text-white">Catégories</h5>
+              <ul className="space-y-3 text-gray-400">
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">💰 Fiscal</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">🎁 Subventions</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">⚖️ Légal</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">👥 Emploi</Link></li>
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">📅 Événements</Link></li>
               </ul>
             </div>
+            
             <div>
-              <h5 className="font-semibold mb-4">Légal</h5>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Conditions d&apos;utilisation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <h5 className="font-bold mb-6 text-white">Liens</h5>
+              <ul className="space-y-3 text-gray-400">
+                <li><Link href="/calendrier" className="hover:text-white transition-colors">Calendrier</Link></li>
+                <li><a href="#comment-ca-marche" className="hover:text-white transition-colors">Comment ça marche</a></li>
+                <li><a href="mailto:info@calendrierpme.ca" className="hover:text-white transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
-            <p>© 2026 Calendrier PME Québec. Tous droits réservés.</p>
+          
+          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              © 2026 Calendrier PME Québec. Tous droits réservés.
+            </p>
+            <div className="flex items-center gap-6 text-gray-500 text-sm">
+              <a href="#" className="hover:text-white transition-colors">Confidentialité</a>
+              <a href="#" className="hover:text-white transition-colors">Conditions</a>
+            </div>
           </div>
         </div>
       </footer>
