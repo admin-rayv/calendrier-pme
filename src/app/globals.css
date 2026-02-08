@@ -2,37 +2,38 @@
 
 /* Custom theme using CSS variables for Tailwind v4 */
 @theme {
-  /* Primary colors - Blue */
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
-  --color-primary-950: #172554;
+  /* Primary colors - Soft blue pastel */
+  --color-primary-50: #f5f8fc;
+  --color-primary-100: #e8f0f8;
+  --color-primary-200: #d1e1f1;
+  --color-primary-300: #a8c8e4;
+  --color-primary-400: #89b5d9;
+  --color-primary-500: #6B9ECF;
+  --color-primary-600: #5a8bc0;
+  --color-primary-700: #4a78a8;
+  --color-primary-800: #3d628a;
+  --color-primary-900: #345270;
+  --color-primary-950: #243a50;
 
-  /* Accent colors - Green */
-  --color-accent-50: #f0fdf4;
-  --color-accent-100: #dcfce7;
-  --color-accent-200: #bbf7d0;
-  --color-accent-300: #86efac;
-  --color-accent-400: #4ade80;
-  --color-accent-500: #22c55e;
-  --color-accent-600: #16a34a;
-  --color-accent-700: #15803d;
-  --color-accent-800: #166534;
-  --color-accent-900: #14532d;
-  --color-accent-950: #052e16;
+  /* Accent colors - Soft sage green */
+  --color-accent-50: #f4f9f6;
+  --color-accent-100: #e5f2eb;
+  --color-accent-200: #cce6d8;
+  --color-accent-300: #a5d4bc;
+  --color-accent-400: #8ec6a8;
+  --color-accent-500: #7DB895;
+  --color-accent-600: #6aa882;
+  --color-accent-700: #5a916f;
+  --color-accent-800: #4a755b;
+  --color-accent-900: #3e614c;
+  --color-accent-950: #2a4333;
 
-  /* Category colors */
-  --color-fiscal: #3b82f6;
-  --color-subvention: #22c55e;
-  --color-legal: #f59e0b;
-  --color-event: #8b5cf6;
+  /* Category colors - Pastel palette */
+  --color-fiscal: #6B9ECF;
+  --color-subvention: #7DB895;
+  --color-legal: #E8A87C;
+  --color-event: #9B8DC2;
+  --color-emploi: #D4A5B5;
 
   /* Fonts */
   --font-sans: 'Inter', system-ui, sans-serif;

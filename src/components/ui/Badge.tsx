@@ -8,11 +8,11 @@ interface BadgeProps {
 }
 
 const categoryStyles: Record<Category, string> = {
-  fiscal: 'bg-blue-100 text-blue-800',
-  subvention: 'bg-green-100 text-green-800',
-  legal: 'bg-amber-100 text-amber-800',
-  event: 'bg-violet-100 text-violet-800',
-  emploi: 'bg-pink-100 text-pink-800',
+  fiscal: 'bg-[#6B9ECF]/15 text-[#4a78a8]',
+  subvention: 'bg-[#7DB895]/15 text-[#5a916f]',
+  legal: 'bg-[#E8A87C]/15 text-[#c48555]',
+  event: 'bg-[#9B8DC2]/15 text-[#7a6ba8]',
+  emploi: 'bg-[#D4A5B5]/15 text-[#a8778a]',
 };
 
 const categoryLabels: Record<Category, string> = {

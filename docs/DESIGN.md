@@ -9,15 +9,15 @@
 | Primary | `#3b82f6` | Actions principales, liens, headers |
 | Accent | `#22c55e` | Succès, confirmations, CTA secondaires |
 
-### Couleurs par catégorie
+### Couleurs par catégorie (Palette pastel)
 
-| Catégorie | Hex | Emoji | Tailwind Class |
-|-----------|-----|-------|----------------|
-| Fiscal | `#3b82f6` | 💰 | `bg-fiscal`, `text-blue-*` |
-| Subvention | `#22c55e` | 🎁 | `bg-subvention`, `text-green-*` |
-| Légal | `#f59e0b` | ⚖️ | `bg-legal`, `text-amber-*` |
-| Événement | `#8b5cf6` | 📅 | `bg-event`, `text-violet-*` |
-| Emploi | `#ec4899` | 👥 | `bg-emploi`, `text-pink-*` |
+| Catégorie | Hex | Emoji | Description |
+|-----------|-----|-------|-------------|
+| Fiscal | `#6B9ECF` | 💰 | Bleu pastel doux |
+| Subvention | `#7DB895` | 🎁 | Vert sauge/menthe |
+| Légal | `#E8A87C` | ⚖️ | Pêche/corail doux |
+| Événement | `#9B8DC2` | 📅 | Lavande |
+| Emploi | `#D4A5B5` | 👥 | Rose poudré |
 
 ### Neutrals
 

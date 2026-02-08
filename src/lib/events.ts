@@ -10,7 +10,7 @@ export const CATEGORIES: CategoryMeta[] = [
     label: 'Fiscal',
     labelFr: 'Fiscal',
     emoji: '💰',
-    color: '#3b82f6',
+    color: '#6B9ECF',
     description: 'Échéances fiscales et déclarations',
   },
   {
@@ -18,7 +18,7 @@ export const CATEGORIES: CategoryMeta[] = [
     label: 'Grants',
     labelFr: 'Subventions',
     emoji: '🎁',
-    color: '#22c55e',
+    color: '#7DB895',
     description: 'Programmes de subventions et aides financières',
   },
   {
@@ -26,7 +26,7 @@ export const CATEGORIES: CategoryMeta[] = [
     label: 'Legal',
     labelFr: 'Légal',
     emoji: '⚖️',
-    color: '#f59e0b',
+    color: '#E8A87C',
     description: 'Obligations légales et réglementaires',
   },
   {
@@ -34,7 +34,7 @@ export const CATEGORIES: CategoryMeta[] = [
     label: 'Events',
     labelFr: 'Événements',
     emoji: '📅',
-    color: '#8b5cf6',
+    color: '#9B8DC2',
     description: 'Salons, formations et événements business',
   },
   {
@@ -42,7 +42,7 @@ export const CATEGORIES: CategoryMeta[] = [
     label: 'Employment',
     labelFr: 'Emploi',
     emoji: '👥',
-    color: '#ec4899',
+    color: '#D4A5B5',
     description: 'Obligations envers les employés',
   },
 ];
