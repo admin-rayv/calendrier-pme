@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { CalendarEvent, EventCategory } from '@/types/event';
 import { getAllEvents, getCategoryMeta, formatDateFr, getDaysUntil } from '@/lib/events';
 import { Badge } from '@/components/ui/Badge';
@@ -13,6 +13,9 @@ const MONTHS = [
   'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
 ];
 
+const STORAGE_KEY = 'calendrierpme-filters';
+const ALL_CATEGORIES: EventCategory[] = ['fiscal', 'subvention', 'legal', 'event', 'emploi'];
+
 interface CalendarProps {
   initialYear?: number;
   initialMonth?: number;
@@ -23,9 +26,31 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
   const [currentYear, setCurrentYear] = useState(initialYear ?? today.getFullYear());
   const [currentMonth, setCurrentMonth] = useState(initialMonth ?? today.getMonth());
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null);
-  const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
-    new Set(['fiscal', 'subvention', 'legal', 'event', 'emploi'])
-  );
+  const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(() => {
+    // Initialize with saved categories or all categories
+    if (typeof window === 'undefined') return new Set(ALL_CATEGORIES);
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        const parsed = JSON.parse(saved) as EventCategory[];
+        return new Set(parsed.filter(c => ALL_CATEGORIES.includes(c)));
+      }
+    } catch {
+      // Ignore errors
+    }
+    return new Set(ALL_CATEGORIES);
+  });
+
+  // Save categories to localStorage when they change
+  const saveCategories = useCallback((categories: Set<EventCategory>) => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...categories]));
+    }
+  }, []);
+
+  useEffect(() => {
+    saveCategories(activeCategories);
+  }, [activeCategories, saveCategories]);
 
   const allEvents = getAllEvents();
 
