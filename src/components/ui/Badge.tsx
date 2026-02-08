@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-type Category = 'fiscal' | 'subvention' | 'legal' | 'event';
+type Category = 'fiscal' | 'subvention' | 'legal' | 'event' | 'emploi';
 
 interface BadgeProps {
   category: Category;
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const categoryStyles: Record<Category, string> = {
@@ -12,6 +12,7 @@ const categoryStyles: Record<Category, string> = {
   subvention: 'bg-green-100 text-green-800',
   legal: 'bg-amber-100 text-amber-800',
   event: 'bg-violet-100 text-violet-800',
+  emploi: 'bg-pink-100 text-pink-800',
 };
 
 const categoryLabels: Record<Category, string> = {
@@ -19,6 +20,7 @@ const categoryLabels: Record<Category, string> = {
   subvention: '🎁 Subvention',
   legal: '⚖️ Légal',
   event: '📅 Événement',
+  emploi: '👥 Emploi',
 };
 
 export function Badge({ category, children }: BadgeProps) {

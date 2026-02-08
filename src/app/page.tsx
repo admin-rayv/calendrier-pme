@@ -36,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           <Card className="text-center hover:shadow-md transition-shadow">
             <div className="text-4xl mb-4">💰</div>
             <h3 className="text-lg font-semibold mb-2">Échéances fiscales</h3>
@@ -50,7 +50,7 @@ export default function Home() {
             <div className="text-4xl mb-4">🎁</div>
             <h3 className="text-lg font-semibold mb-2">Subventions</h3>
             <p className="text-gray-600 text-sm mb-4">
-              PCAN, CanExport, BDC, programmes provinciaux
+              CRSNG, CanExport, SODEC, RS&DE
             </p>
             <Badge category="subvention">Subvention</Badge>
           </Card>
@@ -59,16 +59,25 @@ export default function Home() {
             <div className="text-4xl mb-4">⚖️</div>
             <h3 className="text-lg font-semibold mb-2">Obligations légales</h3>
             <p className="text-gray-600 text-sm mb-4">
-              CNESST, normes du travail, Loi 25, REQ
+              Loi 25, équité salariale, CNESST
             </p>
             <Badge category="legal">Légal</Badge>
+          </Card>
+
+          <Card className="text-center hover:shadow-md transition-shadow">
+            <div className="text-4xl mb-4">👥</div>
+            <h3 className="text-lg font-semibold mb-2">Emploi</h3>
+            <p className="text-gray-600 text-sm mb-4">
+              T4, salaire minimum, jours fériés
+            </p>
+            <Badge category="emploi">Emploi</Badge>
           </Card>
 
           <Card className="text-center hover:shadow-md transition-shadow">
             <div className="text-4xl mb-4">📅</div>
             <h3 className="text-lg font-semibold mb-2">Événements</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Salons, formations, networking
+              Startupfest, C2, Stratégies PME
             </p>
             <Badge category="event">Événement</Badge>
           </Card>

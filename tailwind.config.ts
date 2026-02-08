@@ -42,6 +42,7 @@ const config: Config = {
         subvention: '#22c55e', // Vert
         legal: '#f59e0b',      // Orange
         event: '#8b5cf6',      // Violet
+        emploi: '#ec4899',     // Rose/Pink
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
