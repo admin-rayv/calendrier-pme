@@ -1,0 +1,92 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-08",
+  "events": [
+    {
+      "id": "fiscal-001",
+      "title": "Acomptes provisionnels T1 - 1er versement",
+      "description": "Premier versement des acomptes provisionnels pour les particuliers et entreprises individuelles.",
+      "date": "2026-03-15",
+      "category": "fiscal",
+      "recurrence": "quarterly",
+      "organization": "Revenu Québec / ARC",
+      "sourceUrl": "https://www.revenuquebec.ca/fr/citoyens/declaration-de-revenus/payer-votre-solde/versements-anticipes/",
+      "applicableTo": ["sole-proprietor", "all"],
+      "priority": "high"
+    },
+    {
+      "id": "fiscal-002",
+      "title": "Date limite déclaration T1 (particuliers)",
+      "description": "Date limite pour produire la déclaration de revenus des particuliers.",
+      "date": "2026-04-30",
+      "category": "fiscal",
+      "recurrence": "annual",
+      "organization": "Revenu Québec / ARC",
+      "sourceUrl": "https://www.canada.ca/fr/agence-revenu/services/impot/particuliers/sujets/tout-votre-declaration-revenus/date-limite-production-declaration-revenus.html",
+      "applicableTo": ["all"],
+      "priority": "high"
+    },
+    {
+      "id": "fiscal-003",
+      "title": "Remise TPS/TVQ - Déclaration mensuelle",
+      "description": "Date limite pour les entreprises avec déclaration mensuelle de TPS/TVQ.",
+      "date": "2026-02-28",
+      "category": "fiscal",
+      "recurrence": "monthly",
+      "organization": "Revenu Québec",
+      "sourceUrl": "https://www.revenuquebec.ca/fr/entreprises/taxes/tpstvh-et-tvq/",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "high"
+    },
+    {
+      "id": "legal-001",
+      "title": "Déclaration annuelle CNESST",
+      "description": "Date limite pour transmettre la déclaration des salaires à la CNESST.",
+      "date": "2026-03-14",
+      "category": "legal",
+      "recurrence": "annual",
+      "organization": "CNESST",
+      "sourceUrl": "https://www.cnesst.gouv.qc.ca/fr/organisation/documentation/formulaires-publications/declaration-salaires",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "high"
+    },
+    {
+      "id": "legal-002",
+      "title": "Mise à jour annuelle REQ",
+      "description": "Mise à jour annuelle obligatoire au Registraire des entreprises du Québec.",
+      "date": "2026-06-15",
+      "category": "legal",
+      "recurrence": "annual",
+      "organization": "REQ",
+      "sourceUrl": "https://www.quebec.ca/entreprises-et-travailleurs-autonomes/demarrer-entreprise/registraire-entreprises",
+      "applicableTo": ["incorporated"],
+      "priority": "medium"
+    },
+    {
+      "id": "subvention-001",
+      "title": "PCAN - Programme canadien d'adoption du numérique",
+      "description": "Date limite pour soumettre une demande au programme d'aide à la numérisation des PME.",
+      "date": "2026-03-31",
+      "category": "subvention",
+      "recurrence": "once",
+      "organization": "ISDE Canada",
+      "sourceUrl": "https://ised-isde.canada.ca/site/canada-digital-adoption-program/fr",
+      "applicableTo": ["incorporated", "sole-proprietor"],
+      "priority": "medium",
+      "tags": ["numérique", "technologie", "subvention fédérale"]
+    },
+    {
+      "id": "event-001",
+      "title": "Salon des entrepreneurs de Montréal",
+      "description": "Plus grand salon dédié aux entrepreneurs au Québec. Conférences, exposants, networking.",
+      "date": "2026-05-14",
+      "category": "event",
+      "recurrence": "annual",
+      "organization": "Palais des congrès",
+      "sourceUrl": "https://www.salondesentrepreneurs.com/",
+      "applicableTo": ["all"],
+      "priority": "low",
+      "tags": ["networking", "formation", "montréal"]
+    }
+  ]
+}
