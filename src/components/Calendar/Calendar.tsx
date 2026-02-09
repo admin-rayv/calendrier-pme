@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { CalendarEvent, EventCategory } from '@/types/event';
 import { getAllEvents, getCategoryMeta, formatDateFr, getDaysUntil } from '@/lib/events';
+import { getGoogleCalendarUrl, getOutlookCalendarUrl, downloadICS } from '@/lib/calendarLinks';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 
@@ -321,6 +322,44 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                 </div>
               </div>
             )}
+            
+            {/* Add to Calendar Section */}
+            <div className="mt-6 pt-6 border-t-2 border-gray-100">
+              <p className="text-sm font-semibold text-gray-700 mb-3">📆 Ajouter à mon calendrier</p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href={getGoogleCalendarUrl(selectedEvent)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-medium text-sm hover:border-[#19747E] hover:text-[#19747E] transition-all"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-11v6h2v-6h-2zm0-4v2h2V7h-2z"/>
+                  </svg>
+                  Google
+                </a>
+                <a
+                  href={getOutlookCalendarUrl(selectedEvent)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-medium text-sm hover:border-[#19747E] hover:text-[#19747E] transition-all"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7z"/>
+                  </svg>
+                  Outlook
+                </a>
+                <button
+                  onClick={() => downloadICS(selectedEvent)}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border-2 border-gray-200 text-gray-700 font-medium text-sm hover:border-[#19747E] hover:text-[#19747E] transition-all"
+                >
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                  </svg>
+                  iCal / Autre
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       )}
