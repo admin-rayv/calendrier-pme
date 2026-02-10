@@ -26,6 +26,7 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
   const [currentYear, setCurrentYear] = useState(initialYear ?? today.getFullYear());
   const [currentMonth, setCurrentMonth] = useState(initialMonth ?? today.getMonth());
   const [selectedEvent, setSelectedEvent] = useState<CalendarEvent | null>(null);
+  const [selectedDay, setSelectedDay] = useState<{ day: number; events: CalendarEvent[] } | null>(null);
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(() => {
     // Initialize with saved categories or all categories
     if (typeof window === 'undefined') return new Set(ALL_CATEGORIES);
@@ -240,9 +241,12 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                         );
                       })}
                       {dayEvents.length > 3 && (
-                        <div className="text-xs text-[#19747E] font-medium px-1">
-                          +{dayEvents.length - 3} autres
-                        </div>
+                        <button
+                          onClick={() => setSelectedDay({ day: day!, events: dayEvents })}
+                          className="w-full text-left text-xs text-[#19747E] font-medium px-1 hover:text-[#0d4a4f] hover:underline transition-colors"
+                        >
+                          +{dayEvents.length - 3} autre{dayEvents.length - 3 > 1 ? 's' : ''} →
+                        </button>
                       )}
                     </div>
                   </>
@@ -359,6 +363,68 @@ export function Calendar({ initialYear, initialMonth }: CalendarProps) {
                   iCal / Autre
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Day Overview Modal - Shows all events for a day */}
+      {selectedDay && (
+        <div 
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 z-50"
+          onClick={() => setSelectedDay(null)}
+        >
+          <div 
+            className="bg-white rounded-3xl border-2 border-gray-200 p-6 max-w-md w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+            onClick={(e: React.MouseEvent) => e.stopPropagation()}
+          >
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-xl font-bold text-gray-900">
+                📅 {selectedDay.day} {MONTHS[currentMonth]} {currentYear}
+              </h3>
+              <button
+                onClick={() => setSelectedDay(null)}
+                className="w-10 h-10 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-500 hover:text-gray-700 flex items-center justify-center text-xl transition-colors"
+              >
+                ×
+              </button>
+            </div>
+            <p className="text-sm text-gray-500 mb-4">
+              {selectedDay.events.length} événement{selectedDay.events.length > 1 ? 's' : ''} cette journée
+            </p>
+            <div className="space-y-3">
+              {selectedDay.events.map(event => {
+                const meta = getCategoryMeta(event.category);
+                return (
+                  <button
+                    key={event.id}
+                    onClick={() => {
+                      setSelectedDay(null);
+                      setSelectedEvent(event);
+                    }}
+                    className="w-full text-left p-4 rounded-2xl border-2 transition-all duration-150 hover:scale-[1.01]"
+                    style={{
+                      backgroundColor: meta?.color + '10',
+                      borderColor: meta?.color + '30',
+                    }}
+                  >
+                    <div className="flex items-start gap-3">
+                      <span className="text-lg">{meta?.emoji}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-gray-900 mb-1">{event.title}</p>
+                        <p className="text-sm text-gray-600 line-clamp-2">{event.description}</p>
+                        <span 
+                          className="inline-block mt-2 text-xs font-medium px-2 py-1 rounded-lg"
+                          style={{ backgroundColor: meta?.color + '20', color: meta?.color }}
+                        >
+                          {meta?.labelFr}
+                        </span>
+                      </div>
+                      <span className="text-gray-400 text-lg">→</span>
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
