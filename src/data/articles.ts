@@ -14,7 +14,7 @@ export const articles: Article[] = [
 
 Vous facturez vos clients depuis quelques années maintenant. Les affaires vont bien — peut-être même *trop* bien pour rester travailleur autonome. Votre comptable vous a glissé le mot « incorporation » lors de votre dernière rencontre, et depuis, la question vous trotte dans la tête.
 
-Vous n'êtes pas seul. Chaque année, environ **50 000 nouvelles entreprises** sont créées au Québec selon le Registraire des entreprises. Parmi elles, une proportion grandissante choisit l'incorporation dès le départ — ou y migre après quelques années d'activité.
+Vous n'êtes pas seul. Chaque année, environ **50 000 nouvelles entreprises** sont créées au Québec selon le [Registraire des entreprises du Québec](https://www.registreentreprises.gouv.qc.ca). Parmi elles, une proportion grandissante choisit l'incorporation dès le départ — ou y migre après quelques années d'activité.
 
 Mais comment savoir si c'est vraiment le bon moment pour *vous*?
 
@@ -24,7 +24,7 @@ Parlons chiffres. En 2026, le taux d'imposition marginal des particuliers au Qu�
 
 **La règle du pouce?** Si votre bénéfice net dépasse **80 000 $ à 100 000 $ par année** et que vous n'avez pas besoin de retirer tout cet argent pour vivre, l'incorporation commence à faire du sens. Vous pourrez laisser l'excédent dans la société, investi ou en réserve, taxé à un taux beaucoup plus bas.
 
-Selon une étude de la Fédération canadienne de l'entreprise indépendante (FCEI), les propriétaires de PME incorporées épargnent en moyenne **15 000 $ à 25 000 $ par année** en impôts comparativement à ceux qui opèrent comme travailleurs autonomes avec des revenus similaires.
+Selon une étude de la [Fédération canadienne de l'entreprise indépendante (FCEI)](https://www.cfib-fcei.ca/fr), les propriétaires de PME incorporées épargnent en moyenne **15 000 $ à 25 000 $ par année** en impôts comparativement à ceux qui opèrent comme travailleurs autonomes avec des revenus similaires.
 
 ## Les signaux qu'il est temps de sauter le pas
 
@@ -94,7 +94,7 @@ L'important, c'est de **réévaluer votre situation chaque année** avec un comp
 
 Il y a ce point de bascule dans la vie d'un entrepreneur. Ce moment où vous réalisez que refuser des contrats parce que vous manquez de temps vous coûte plus cher que d'embaucher quelqu'un pour vous aider.
 
-Selon Statistique Canada, les entreprises qui passent de 0 à 1 employé dans leurs deux premières années ont **60 % plus de chances** de survivre à leur cinquième anniversaire que celles qui restent en solo. Ce n'est pas un hasard : grandir, c'est souvent ce qui permet de stabiliser.
+Selon [Statistique Canada](https://www.statcan.gc.ca/fr), les entreprises qui passent de 0 à 1 employé dans leurs deux premières années ont **60 % plus de chances** de survivre à leur cinquième anniversaire que celles qui restent en solo. Ce n'est pas un hasard : grandir, c'est souvent ce qui permet de stabiliser.
 
 Mais embaucher trop tôt peut vous couler. Alors comment savoir?
 
@@ -141,7 +141,7 @@ Ajoutez l'équipement, la formation, et les erreurs inévitables de début, et v
 Devenir employeur au Québec, c'est signer pour un paquet de responsabilités :
 
 - **Retenues à la source** : RRQ, RQAP, impôt fédéral et provincial — à calculer et remettre chaque mois ou chaque trimestre
-- **Inscription à la CNESST** : obligatoire, même pour un seul employé
+- **Inscription à la [CNESST](https://www.cnesst.gouv.qc.ca)** : obligatoire, même pour un seul employé
 - **Relevé 1 et T4** : à produire avant le 28 février de chaque année
 - **Normes du travail** : salaire minimum, heures supplémentaires, congés fériés, etc.
 - **Équité salariale** : pour les entreprises de 10+ employés
@@ -204,7 +204,7 @@ Demander du financement au mauvais moment, c'est comme postuler pour un emploi l
 
 À l'inverse, demander au bon moment — quand vous êtes en position de force — change complètement la dynamique. Vous négociez, vous choisissez, vous obtenez de meilleures conditions.
 
-Selon la Banque de développement du Canada (BDC), les entreprises qui planifient leurs besoins de financement **6 à 12 mois à l'avance** obtiennent des taux d'intérêt en moyenne **1,5 % plus bas** que celles qui arrivent en urgence.
+Selon la [Banque de développement du Canada (BDC)](https://www.bdc.ca/fr), les entreprises qui planifient leurs besoins de financement **6 à 12 mois à l'avance** obtiennent des taux d'intérêt en moyenne **1,5 % plus bas** que celles qui arrivent en urgence.
 
 ## Quand les banques disent oui
 
@@ -261,7 +261,7 @@ En 2026, voici les programmes les plus accessibles pour les PME :
 - **Fonds locaux de solidarité FTQ** : Prêts patients pour les entreprises locales
 - **PME MTL** : Prêts et subventions pour les entreprises montréalaises
 
-Consultez Investissement Québec et le Réseau Entreprises Canada pour la liste complète et les dates limites.
+Consultez [Investissement Québec](https://www.investquebec.com/quebec/fr) et le [Réseau Entreprises Canada](https://entreprisescanada.ca) pour la liste complète et les dates limites.
 
 ## Les signaux que ce n'est PAS le bon moment
 
@@ -312,7 +312,7 @@ Les entrepreneurs qui réussissent ne cherchent pas du financement en réaction 
 
 On n'aime pas y penser, mais la relation avec son comptable, c'est un peu comme un mariage professionnel. Au début, tout est beau — il comprend votre entreprise, répond vite, vous donne des conseils pertinents. Puis, avec le temps, quelque chose se brise. Les retours d'appels prennent des jours. Les factures augmentent sans explication. Vous avez l'impression d'être un numéro parmi tant d'autres.
 
-Selon un sondage de CPA Canada, **23 % des PME** ont changé de comptable au cours des 5 dernières années. Les raisons principales? Manque de proactivité, tarifs trop élevés, et erreurs répétées.
+Selon un sondage de [CPA Canada](https://www.cpacanada.ca/fr), **23 % des PME** ont changé de comptable au cours des 5 dernières années. Les raisons principales? Manque de proactivité, tarifs trop élevés, et erreurs répétées.
 
 Si vous vous reconnaissez, il est peut-être temps d'avoir « la conversation ».
 
@@ -414,7 +414,7 @@ Un bon comptable devrait être un partenaire stratégique, pas un mal nécessair
 
 ---
 
-*Besoin d'aide pour trouver un comptable spécialisé dans votre secteur? Consultez l'Ordre des CPA du Québec.*
+*Besoin d'aide pour trouver un comptable spécialisé dans votre secteur? Consultez l'[Ordre des CPA du Québec](https://cpaquebec.ca).*
     `
   },
   {
@@ -515,7 +515,7 @@ Ne manquez plus jamais une échéance. Chaque mois, recevez un récapitulatif co
 
 ---
 
-*Toutes les dates sont basées sur le calendrier fiscal 2026. Consultez l'ARC et Revenu Québec pour confirmer les échéances officielles.*
+*Toutes les dates sont basées sur le calendrier fiscal 2026. Consultez l'[ARC](https://www.canada.ca/fr/agence-revenu.html) et [Revenu Québec](https://www.revenuquebec.ca) pour confirmer les échéances officielles.*
     `
   },
   {
@@ -838,7 +838,7 @@ Les pénalités sont de 10 % du montant non versé, plus les intérêts. Sur 10 
 
 Vous avez une idée. Peut-être même une très bonne idée. Mais entre l'étincelle initiale et une entreprise qui génère des revenus, il y a un chemin à parcourir. Ce guide vous donne un plan réaliste pour y arriver en 12 mois.
 
-Selon la BDC, les entrepreneurs qui prennent le temps de planifier leur lancement ont **30 % plus de chances** de réussir que ceux qui se lancent impulsivement. Un an, c'est assez pour bien faire les choses sans vous épuiser.
+Selon la [BDC](https://www.bdc.ca/fr), les entrepreneurs qui prennent le temps de planifier leur lancement ont **30 % plus de chances** de réussir que ceux qui se lancent impulsivement. Un an, c'est assez pour bien faire les choses sans vous épuiser.
 
 ## Mois 1-2 : Validation de l'idée
 
