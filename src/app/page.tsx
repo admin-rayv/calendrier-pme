@@ -32,9 +32,9 @@ export default function Home() {
               <Link href="/calendrier" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
                 Calendrier
               </Link>
-              <a href="#categories" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
-                Catégories
-              </a>
+              <Link href="/planificateur" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
+                Le Planificateur
+              </Link>
               <a href="#faq" className="text-gray-600 hover:text-[#19747E] font-medium transition-colors">
                 FAQ
               </a>

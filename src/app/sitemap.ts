@@ -1,10 +1,13 @@
 import { MetadataRoute } from 'next';
+import { getAllArticles } from '@/data/articles';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://calendrierpme.ca';
   const currentDate = new Date();
+  
+  const articles = getAllArticles();
 
-  return [
+  const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: currentDate,
@@ -17,18 +20,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
-    // Section anchors for better crawling
     {
-      url: `${baseUrl}/#faq`,
+      url: `${baseUrl}/planificateur`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#categories`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
   ];
+
+  const articlePages: MetadataRoute.Sitemap = articles.map(article => ({
+    url: `${baseUrl}/planificateur/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...articlePages];
 }
